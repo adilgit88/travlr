@@ -4,21 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adilgit88/travlr.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/adilgit88/travlr/issues"
-  },
-  "homepage": "https://github.com/adilgit88/travlr#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.22.2",
+    "hbs": "^4.2.1",
+    "http-errors": "~1.6.3",
+    "morgan": "^1.10.1"
   }
 }
