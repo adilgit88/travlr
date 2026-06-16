@@ -1,0 +1,60 @@
+.form-page {
+  margin: 32px auto;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+form {
+  background: #fff;
+  border: 1px solid #d8e2e8;
+  border-radius: 8px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  padding: 24px;
+}
+
+label {
+  color: #17314a;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 6px;
+}
+
+input,
+textarea {
+  border: 1px solid #b8c7d0;
+  border-radius: 4px;
+  font: inherit;
+  padding: 10px;
+}
+
+.wide,
+.message,
+.actions {
+  grid-column: 1 / -1;
+}
+
+.message {
+  color: #a33422;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: #0f6fa7;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+button.secondary {
+  background: #607d8b;
+}

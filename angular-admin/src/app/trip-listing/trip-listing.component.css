@@ -1,0 +1,51 @@
+.page-header {
+  align-items: center;
+  background: #0f3d5e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+
+.page-header h1 {
+  margin: 0 0 6px;
+}
+
+.page-header p {
+  margin: 0;
+}
+
+.status-bar {
+  background: #f2f6f8;
+  border-bottom: 1px solid #d4e1e8;
+  padding: 14px 32px;
+}
+
+.message {
+  color: #a33422;
+  margin-left: 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 32px;
+}
+
+.empty-state {
+  margin: 32px;
+  padding: 24px;
+  background: #fff7dd;
+  border: 1px solid #e5ce83;
+}
+
+button.primary {
+  background: #f5a623;
+  border: 0;
+  border-radius: 4px;
+  color: #17314a;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 16px;
+}

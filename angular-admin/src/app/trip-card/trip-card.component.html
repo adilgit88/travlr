@@ -1,0 +1,16 @@
+<article class="trip-card">
+  <img [src]="'http://localhost:3000/images/' + trip.image" [alt]="trip.name">
+  <div class="trip-content">
+    <p class="trip-code">{{ trip.code }}</p>
+    <h2>{{ trip.name }}</h2>
+    <p><strong>Resort:</strong> {{ trip.resort }}</p>
+    <p><strong>Length:</strong> {{ trip.length }}</p>
+    <p><strong>Start:</strong> {{ trip.start | date: 'mediumDate' }}</p>
+    <p><strong>Price:</strong> ${{ trip.perPerson }} per person</p>
+    <p class="description">{{ trip.description }}</p>
+    <div class="actions">
+      <button type="button" (click)="onEditTrip()">Edit</button>
+      <button class="danger" type="button" (click)="onDeleteTrip()">Delete</button>
+    </div>
+  </div>
+</article>

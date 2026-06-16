@@ -1,0 +1,53 @@
+<section class="form-page">
+  <h1>Edit Trip</h1>
+  <p>Update the selected package and save the changes through the PUT API endpoint.</p>
+
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <label>
+      Trip Code
+      <input type="text" formControlName="code">
+    </label>
+
+    <label>
+      Name
+      <input type="text" formControlName="name">
+    </label>
+
+    <label>
+      Length
+      <input type="text" formControlName="length">
+    </label>
+
+    <label>
+      Start Date
+      <input type="date" formControlName="start">
+    </label>
+
+    <label>
+      Resort
+      <input type="text" formControlName="resort">
+    </label>
+
+    <label>
+      Per Person
+      <input type="text" formControlName="perPerson">
+    </label>
+
+    <label>
+      Image Filename
+      <input type="text" formControlName="image">
+    </label>
+
+    <label class="wide">
+      Description
+      <textarea formControlName="description" rows="5"></textarea>
+    </label>
+
+    <p class="message" *ngIf="message">{{ message }}</p>
+
+    <div class="actions">
+      <button type="submit">Update Trip</button>
+      <button class="secondary" type="button" (click)="router.navigate([''])">Cancel</button>
+    </div>
+  </form>
+</section>

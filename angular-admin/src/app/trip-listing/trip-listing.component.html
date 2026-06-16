@@ -1,0 +1,38 @@
+<header class="page-header">
+  <div>
+    <h1>Travlr Getaways Admin</h1>
+    <p>Manage trip packages stored in MongoDB through the Express REST API.</p>
+  </div>
+
+  <button class="primary" type="button" (click)="addTrip()">Add Trip</button>
+</header>
+
+<section class="status-bar">
+  <strong>Number of trips:</strong> {{ trips.length }}
+  <span class="message" *ngIf="message">{{ message }}</span>
+</section>
+
+<section class="cards" *ngIf="trips.length > 0">
+  <div class="trip-card" *ngFor="let trip of trips">
+   
+
+    <div class="trip-content">
+      <h2>{{ trip.name }}</h2>
+      <p><strong>Code:</strong> {{ trip.code }}</p>
+      <p><strong>Length:</strong> {{ trip.length }}</p>
+      <p><strong>Start:</strong> {{ trip.start | date }}</p>
+      <p><strong>Resort:</strong> {{ trip.resort }}</p>
+      <p><strong>Price:</strong> {{ trip.perPerson }} per person</p>
+      <p>{{ trip.description }}</p>
+
+      <div class="actions">
+        <button type="button" (click)="editTrip(trip)">Edit</button>
+        <button type="button" (click)="deleteTrip(trip)">Delete</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="empty-state" *ngIf="trips.length === 0">
+  No trips are currently available. Add a trip to seed the admin list.
+</div>

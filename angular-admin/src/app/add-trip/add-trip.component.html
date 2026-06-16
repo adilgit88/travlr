@@ -1,0 +1,53 @@
+<section class="form-page">
+  <h1>Add Trip</h1>
+  <p>Create a new travel package and save it to MongoDB through the REST API.</p>
+
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <label>
+      Trip Code
+      <input type="text" formControlName="code" placeholder="CHIL260701">
+    </label>
+
+    <label>
+      Name
+      <input type="text" formControlName="name" placeholder="Chicago Lakefront Escape">
+    </label>
+
+    <label>
+      Length
+      <input type="text" formControlName="length" placeholder="3 nights / 4 days">
+    </label>
+
+    <label>
+      Start Date
+      <input type="date" formControlName="start">
+    </label>
+
+    <label>
+      Resort
+      <input type="text" formControlName="resort" placeholder="Lakeview Harbor Hotel">
+    </label>
+
+    <label>
+      Per Person
+      <input type="text" formControlName="perPerson" placeholder="899.00">
+    </label>
+
+    <label>
+      Image Filename
+      <input type="text" formControlName="image" placeholder="sea-sound.jpg">
+    </label>
+
+    <label class="wide">
+      Description
+      <textarea formControlName="description" rows="5"></textarea>
+    </label>
+
+    <p class="message" *ngIf="message">{{ message }}</p>
+
+    <div class="actions">
+      <button type="submit">Add Trip</button>
+      <button class="secondary" type="button" (click)="router.navigate([''])">Cancel</button>
+    </div>
+  </form>
+</section>
