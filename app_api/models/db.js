@@ -43,3 +43,4 @@ process.on('SIGTERM', () => {
 
 // Bring in the Trips schema
 require('./travlr');
+require('./users');

@@ -1,0 +1,23 @@
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #1c2d3f;
+  color: #fff;
+}
+
+.top-nav span {
+  margin-left: auto;
+  color: #dce6ef;
+}
+
+.top-nav button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}

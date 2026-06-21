@@ -1,1 +1,7 @@
+<nav class="top-nav" *ngIf="authenticationService.isLoggedIn()">
+  <strong>Travlr Getaways Admin</strong>
+  <span>Signed in as {{ authenticationService.getCurrentUserName() }}</span>
+  <button type="button" (click)="logout()">Logout</button>
+</nav>
+
 <router-outlet></router-outlet>
